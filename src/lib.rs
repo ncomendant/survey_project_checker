@@ -5,6 +5,8 @@ use std::rc::Rc;
 use error::Error;
 use html::Html;
 use js_wasm::dom::body;
+use math_util::PlaceValue;
+use math_util::rational_number::NumberDisplayFormat;
 use math_util::rational_number::RationalNumber;
 use wasm_bindgen::prelude::*;
 use wasm_bindgen::JsValue;
@@ -174,7 +176,9 @@ fn avg(nums: &[RationalNumber]) -> RationalNumber {
     let sum = nums.iter().fold(RationalNumber::from(0u32), |acc, n| {
         acc + *n
     });
-    sum / RationalNumber::from(nums.len() as u32)
+    let avg = sum / RationalNumber::from(nums.len() as u32);
+    let avg_str = avg.as_str(Some(NumberDisplayFormat::Decimal(Some(PlaceValue::Tenths))));
+    RationalNumber::parse(&avg_str).expect("failed to parse rounded average")
 }
 
 fn median(nums: &[RationalNumber]) -> RationalNumber {
