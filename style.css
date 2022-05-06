@@ -44,3 +44,15 @@ form div {
     color: lightgoldenrodyellow;
     padding: 0.5em;
 }
+
+body {
+    background-color: coral;
+    text-align: center;
+}
+
+.content {
+    background-color: white;
+    display: inline-block;
+    text-align: left;
+    padding: 1em;
+}
