@@ -1,5 +1,5 @@
 [package]
-name = "wasm_template"
+name = "survey_project_checker"
 version = "0.1.0"
 authors = ["Nicholas Comendant <nicholas.comendant@gmail.com>"]
 edition = "2021"
@@ -12,6 +12,7 @@ crate-type = ["cdylib"]
 [dependencies]
 http = {path = "../rust_libs/http"}
 js_wasm = {path = "../rust_libs/js_wasm"}
+math_util = {path = "../rust_libs/math_util"}
 wasm_mutex = "0.1"
 console_error_panic_hook = "0.1"
 wasm-bindgen = {version = "0.2", features = ["serde-serialize"] }
@@ -22,4 +23,7 @@ js-sys = "0.3"
 version = "0.3"
 features = [
     'HtmlElement',
+    'HtmlFormElement',
+    'HtmlInputElement',
+    'HtmlTextAreaElement',
 ]

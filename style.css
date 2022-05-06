@@ -1,3 +1,7 @@
+html {
+    font-size: 150%;
+}
+
 html, body, div {
     margin: 0px;
     padding: 0px;
@@ -5,4 +9,38 @@ html, body, div {
 
 .hidden {
     display: none !important;
+}
+
+input, textarea, button {
+    display: block;
+    font-size: inherit;
+}
+
+form div {
+    margin-bottom: 1em;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.correct {
+    background-color: lightgreen;
+}
+
+.incorrect {
+    background-color: lightpink;
+}
+
+.warning {
+    background-color: lightyellow;
+}
+
+#scoreLab {
+    font-weight: bold;
+    background-color: darkgoldenrod;
+    color: lightgoldenrodyellow;
+    padding: 0.5em;
 }

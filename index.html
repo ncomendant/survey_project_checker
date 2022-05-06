@@ -1,11 +1,72 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Wasm Template</title>
+        <title>Survey Project Checker</title>
         <meta charset="utf8">
         <link rel="stylesheet" href="./style.css">
     </head>
     <body>
+        <div class="content">
+            <h1>Survey Project Checker</h1>
+            <div id="scoreLab" class="hidden"></div>
+            <form>
+                <div>
+                    <label>Responses (ordered from least to greatest)
+                        <textarea class="responsesInp" rows="5" cols="25"></textarea>
+                    </label>
+                </div>
+
+                <div>
+                    <label>Mean/Average
+                        <input type="number" step="0.1" class="avgInp">
+                    </label>
+                </div>
+
+                <div>
+                    <label>Range
+                        <input type="number" step="0.1" class="rangeInp">
+                    </label>
+                </div>
+
+                <div>
+                    <label>Minimum
+                        <input type="number" step="0.1" class="minInp">
+                    </label>
+                </div>
+
+                <div>
+                    <label>Quartile 1
+                        <input type="number" step="0.1" class="q1Inp">
+                    </label>
+                </div>
+
+                <div>
+                    <label>Median / Quartile 2
+                        <input type="number" step="0.1" class="medianInp">
+                    </label>
+                </div>
+
+                <div>
+                    <label>Quartile 3
+                        <input type="number" step="0.1" class="q3Inp">
+                    </label>
+                </div>
+
+                <div>
+                    <label>Maximum / Quartile 4
+                        <input type="number" step="0.1" class="maxInp">
+                    </label>
+                </div>
+
+                <div>
+                    <label>Mode(s)
+                        <input type="text" class="modeInp">
+                    </label>
+                </div>
+
+                <button type="submit">Check</button>
+            </form>
+        </div>
         <script type="module" src="./scripts/index.js"></script>
     </body>
 </html>

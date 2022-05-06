@@ -8,6 +8,7 @@ pub enum Error {
     JsWasm(js_wasm::error::Error),
     JsValue(JsValue),
     Http(http::HttpError),
+    InvalidResponses,
 }
 
 impl fmt::Display for Error {
@@ -16,6 +17,7 @@ impl fmt::Display for Error {
             Error::JsWasm(e) => write!(f, "{}", e),
             Error::JsValue(e) => write!(f, "{:?}", e),
             Error::Http(e) => write!(f, "{}", e),
+            Error::InvalidResponses => write!(f, "invalid responses"),
         }
     }
 }
