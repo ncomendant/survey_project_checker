@@ -1,0 +1,17 @@
+{
+  "name": "survey_project_checker",
+  "collaborators": [
+    "Nicholas Comendant <nicholas.comendant@gmail.com>"
+  ],
+  "version": "0.1.0",
+  "files": [
+    "survey_project_checker_bg.wasm",
+    "survey_project_checker.js",
+    "survey_project_checker.d.ts"
+  ],
+  "module": "survey_project_checker.js",
+  "types": "survey_project_checker.d.ts",
+  "sideEffects": [
+    "./snippets/*"
+  ]
+}

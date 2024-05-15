@@ -10,9 +10,9 @@ edition = "2021"
 crate-type = ["cdylib"]
 
 [dependencies]
-http = {path = "../rust_libs/http"}
-js_wasm = {path = "../rust_libs/js_wasm"}
-math_util = {path = "../rust_libs/math_util"}
+http = { git = "ssh://git@github.com/ncomendant/http.git" }
+js_wasm = { git = "ssh://git@github.com/ncomendant/js_wasm.git" }
+math_util = { git = "ssh://git@github.com/ncomendant/math_util.git" }
 wasm_mutex = "0.1"
 console_error_panic_hook = "0.1"
 wasm-bindgen = {version = "0.2", features = ["serde-serialize"] }
